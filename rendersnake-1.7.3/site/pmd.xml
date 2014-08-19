@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.2" timestamp="2013-11-05T15:57:21.546">
+<file name="/Users/emicklei/Projects/rendersnake/rendersnake/src/main/java/org/rendersnake/PageContext.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statement Rules" package="org.rendersnake" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.io.Serializable'
+</violation>
+</file>
+<file name="/Users/emicklei/Projects/rendersnake/rendersnake/src/main/java/org/rendersnake/StringResource.java">
+<violation beginline="165" endline="165" begincolumn="72" endcolumn="72" rule="EmptyStatementNotInLoop" ruleset="Basic Rules" package="org.rendersnake" class="StringResource" method="fetchContentOrNull" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyStatementNotInLoop" priority="3">
+An empty statement (semicolon) not part of a loop
+</violation>
+<violation beginline="165" endline="165" begincolumn="49" endcolumn="71" rule="EmptyCatchBlock" ruleset="Basic Rules" package="org.rendersnake" class="StringResource" method="fetchContentOrNull" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
+Avoid empty catch blocks
+</violation>
+</file>
+<file name="/Users/emicklei/Projects/rendersnake/rendersnake/src/main/java/org/rendersnake/ext/jquery/JQueryAttributes.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="27" rule="UnusedImports" ruleset="Import Statement Rules" package="org.rendersnake.ext.jquery" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.io.IOException'
+</violation>
+</file>
+<file name="/Users/emicklei/Projects/rendersnake/rendersnake/src/main/java/org/rendersnake/ext/spring/HtmlCanvasArgumentResolver.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="29" rule="UnusedImports" ruleset="Import Statement Rules" package="org.rendersnake.ext.spring" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Enumeration'
+</violation>
+<violation beginline="13" endline="13" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statement Rules" package="org.rendersnake.ext.spring" externalInfoUrl="http://pmd.sourceforge.net/rules/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'org.rendersnake.internal.SimpleContextMap'
+</violation>
+</file>
+</pmd>

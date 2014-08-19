@@ -1,0 +1,9 @@
+org.rendersnake
+org.rendersnake.error
+org.rendersnake.ext.apache
+org.rendersnake.ext.guice
+org.rendersnake.ext.jquery
+org.rendersnake.ext.servlet
+org.rendersnake.ext.spring
+org.rendersnake.internal
+org.rendersnake.tools

@@ -1,0 +1,2 @@
+Main-Class: options.PortfolioManager
+Class-Path: . lib/rendersnake-1.7.3.jar lib/commons-lang3-3.3.2.jar

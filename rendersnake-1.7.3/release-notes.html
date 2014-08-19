@@ -1,0 +1,399 @@
+
+ 
+
+
+
+ 
+ 
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="http://code.google.com/p/rendersnake/wiki/ReleaseNotes" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"profileUrl":null,"token":null,"projectName":"rendersnake","assetVersionPath":"http://www.gstatic.com/codesite/ph/11225697081361001927","assetHostPath":"http://www.gstatic.com/codesite/ph","loggedInUserEmail":null,"projectHomeUrl":"/p/rendersnake","relativeBaseUrl":"","domainName":null};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-2987987-12'],
+ ['projectTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>ReleaseNotes - 
+ rendersnake -
+ 
+ features per release - 
+ component-oriented support library for HTML page generation in Java - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/11225697081361001927/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/11225697081361001927/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="/feeds/p/rendersnake/svnchanges/basic?path=/wiki/ReleaseNotes.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/11225697081361001927/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=http%3A%2F%2Fcode.google.com%2Fp%2Frendersnake%2Fwiki%2FReleaseNotes&amp;followup=http%3A%2F%2Fcode.google.com%2Fp%2Frendersnake%2Fwiki%2FReleaseNotes" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="/p/rendersnake">
+ <a href="/p/rendersnake/">
+ 
+ 
+ <img src="/p/rendersnake/logo?cct=1308383576"
+ alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/rendersnake/"><span itemprop="name">rendersnake</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="/p/rendersnake/"><span itemprop="description">component-oriented support library for HTML page generation in Java</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/rendersnake/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="/p/rendersnake/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/rendersnake/w/list" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/rendersnake/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/rendersnake/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/rendersnake/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+>
+
+ 
+
+
+
+
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <span style="font-size:120%;font-weight:bold">ReleaseNotes</span>
+ &nbsp;
+ <div> 
+ 
+ <i>features per release</i>
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Tue Feb 12 22:47:30 2013">
+ Feb 12, 2013</span>
+ 
+ by 
+
+ <a class="userlink"
+ href="/u/102732636642124639473/">ernest.m...@gmail.com</a
+>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <h2><a name="1.7.2"></a>1.7.2<a href="#1.7.2" class="section_anchor"></a></h2><p>(2013-02-09) <ul><li>fixed non threadsafe access to cache of StringResource </li><li>added access to URL+Query from incoming Http Request </li></ul></p><h2><a name="1.7.1"></a>1.7.1<a href="#1.7.1" class="section_anchor"></a></h2><p>(2012-10-16) <ul><li>removed IOException in signature of HtmlAttributesFactory methods </li><li>removed <a href="/p/rendersnake/wiki/InsideRenderable">InsideRenderable</a> interface, see Wiki for alternatives </li></ul></p><h2><a name="1.7"></a>1.7<a href="#1.7" class="section_anchor"></a></h2><p>(2012-09-16) <ul><li>removed IOException in signature of HtmlAttributes methods </li><li>add convience methods to HtmlAttributes for integer arguments </li><li>add copy constructor to HtmlAttributes </li><li>fixed encoding for quote </li></ul></p><h2><a name="1.6"></a>1.6<a href="#1.6" class="section_anchor"></a></h2><p>(2012-07-08) <ul><li>fix JQueryAttributesFactory#dataIcon </li><li>add RequestUtils.getIntegerParameter </li><li>add RequestUtils.getBooleanParameter </li><li>removed obsolete RenderableAttribute </li><li>upgraded a.c.l and spring </li><li>deprecated JQueryAttributes and JQueryAttributesFactory ; methods are copied to HtmlAttributes </li></ul></p><h2><a name="1.5.1"></a>1.5.1<a href="#1.5.1" class="section_anchor"></a></h2><p>(2012-04-21) <ul><li>added data(ext,val) </li><li>guide corrections </li></ul></p><h2><a name="1.5"></a>1.5<a href="#1.5" class="section_anchor"></a></h2><p>(2012-02-26) <ul><li>OSGI ready (see <a title="OSGi Ready" class=closed_ref href="/p/rendersnake/issues/detail?id=24">&nbsp;issue 24&nbsp;</a>) </li><li>deprecated some getters in HtmlCanvas ; use RequestUtils instead </li><li>removed dependency with Apache Commons IO </li><li>speed improvement (open-coded xml escaping) </li><li>removed special servlet (refactored site) </li><li>added rendershark quickstart example </li><li>added attribute dataMini for jquery </li><li>removed StringTemplate feature ; if needed use your own favorite </li><li>added attribute dataTest for webtesting support </li></ul></p><h2><a name="1.4.1"></a>1.4.1<a href="#1.4.1" class="section_anchor"></a></h2><p>(2012-01-09) <ul><li>Simplified ContextMap definition </li><li>renamed getAccess to getContextMap in PageContext </li></ul></p><h2><a name="1.4"></a>1.4<a href="#1.4" class="section_anchor"></a></h2><p>(2011-12-18) <ul><li>fixed clear attribute in PageContext (see issues) </li><li>fixed getInt </li><li>set(boolean) =&gt; withBoolean(boolean) </li><li>set(string) =&gt; withString(string) </li><li>set(float) =&gt; withFloat(float) </li><li>set(long) =&gt; withLong(long) </li><li>set(object) =&gt; withObject(object) </li><li>getInt(key) =&gt; getInteger(key) </li><li>get(key) =&gt; getObject(key) </li><li>(sorry, all deprecated methods have been removed) </li><li>request parameters can handle String<a href=""></a> </li><li>ContextAttributesAccess renamed to ContextMap, added SimpleContextMap </li></ul></p><h2><a name="1.3"></a>1.3<a href="#1.3" class="section_anchor"></a></h2><p>(2011-11-08) <ul><li>lazy session creation for Spring HtmlCanvasResolver </li><li>added dataAjax(boolean enabled) </li><li>fixed class cast problem in ContextMap#get </li><li>included renderfly projects </li><li>added quickstart project using Spring </li><li>added quickstart project using Google Guice </li><li>fixed problem with null parameter value for optional get in PageContext </li><li>Sink now ignores render() calls </li><li>deprecated RenderSnakeServlet in favor of Spring or Guice </li><li>moved few classes to ext.servlet package </li><li>marked other servlet classes as deprecated and moved to servlet project </li><li>updated docs on rendersnake.org </li></ul></p><h2><a name="1.2"></a>1.2<a href="#1.2" class="section_anchor"></a></h2><p>(2011-09-06) <ul><li>Removed invalid close methods such as <tt>_</tt>hr and <tt>_</tt>br </li><li>Added form support (via POST) in GuiceComponentServlet </li><li>Redesign of FormHandler to work with Ajaxian apps </li><li>Fixed bug when retrieving non-existing integer value from PageContext </li><li>Add content(aString). See groups. </li><li>Moved JQuery support classes to core library in org.rendersnake.ext.jquery </li><li>change default String escaping for attribute values to true </li><li>removed class Hash (part of Javascript/JQuery tryout) </li><li>removed ToJavascript interface (part of Javascript tryout) </li><li>HtmlServlet canvas is initialized (Spring only) with query and or session attributes in the context  </li><li>debug string for StackedMap </li><li>added  HtmlAttributes.data(extension,data,escape) for Html5 </li><li>upgrade commons libs (common-io 2.0.1, commons-lang 3.0.1) </li><li>getters in PageContext can have optional absent value </li><li>unified (through interface) access to attributes of PageContext, ServletRequest and Session </li><li>added conditional rendering <tt>if_</tt>  and <tt>_if</tt>  to stay fluent <a href="http://code.google.com/p/rendersnake/wiki/ConditionalRendering" rel="nofollow">ConditionalRendering</a> </li><li>access to request parameters via PageContext </li></ul></p><h2><a name="1.1"></a>1.1<a href="#1.1" class="section_anchor"></a></h2><p>(2011-04-29) <ul><li>Reduced object creation =&gt; less garbage =&gt; faster execution </li><li>Removed RenderCallback and RenderCallbackWrapper </li><li>Guice 3.0 Integration </li><li>Deprecated Page Annotation in favor of javax.inject.Named in combination with either Spring or Guice. </li><li>Introduces HtmlEscapeHandler interface </li><ul><li>the library no longer depends on Apache Commons Lang ; it may be provided or define your own implementation </li></ul><li>Internal redesign </li><ul><li>Replaced Stack with ArrayList </li><li>Refactored HtmlCanvas and introduced HtmlServletCanvas </li><ul><li>the library no longer depends on the Servlet API </li></ul><li>Replaced ToAttributesString with CharactersWritable </li><li>StackedHashMap in PageContext replaced by StackedMap </li><li>StringBuilder in HtmlAttributes replaced by WriteBuffer </li></ul><li>StringResource flush() and flush(location) </li><li>StringResource.get(&quot;http ://some.faraway.com/location&quot;) </li><li>XHTML Transitional </li><li>more primitve type access for PageContext </li></ul></p><h2><a name="1.0"></a>1.0<a href="#1.0" class="section_anchor"></a></h2><p>(2011-02-12) <ul><li>Completed HTML5 </li><li>Add template support </li><li>RenderCallback </li><li>Add static resource support </li><li>Add Spring MVC support </li><li>Add test support (e.g jTidy) </li><li>Lots of documentation and examples on rendersnake.org </li><li>jQuery support into separate library </li><li>major refactorings in names of methods and classes </li><li>better render error handling </li></ul></p><h2><a name="0.9"></a>0.9<a href="#0.9" class="section_anchor"></a></h2><p>(xmas 2010) <ul><li>Completed HTML4 api (elements + attributes) </li><li>FormHandling + FormValidation </li><li>Examples on rendersnake.org </li></ul></p><h2><a name="0.8"></a>0.8<a href="#0.8" class="section_anchor"></a></h2><ul><li>HtmlCanvas with complete HTML 4.01 api </li><li>Attributes with 20% complete api implementation </li><li>Annotation based URI mapping </li><li>Debugging canvas for live inspection </li><li>initial FormHandler support </li><li>initial jQuery support </li></ul><h2><a name="0.1"></a>0.1<a href="#0.1" class="section_anchor"></a></h2><ul><li>Concept release with Canvas,Attributes,PageContext,Renderable </li></ul>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ <br>
+ <div class="artifactcomment">
+ <span class="indicator">&#9658;</span> <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=http%3A%2F%2Fcode.google.com%2Fp%2Frendersnake%2Fwiki%2FReleaseNotes&amp;followup=http%3A%2F%2Fcode.google.com%2Fp%2Frendersnake%2Fwiki%2FReleaseNotes"
+ >Sign in</a> to add a comment
+ </div>
+ 
+ 
+ 
+ 
+ <form name="delcom" action="../w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="ReleaseNotes" >
+ <input type="hidden" name="token" value="" >
+ </form>
+
+
+ <script src="http://www.gstatic.com/codesite/ph/11225697081361001927/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="http://www.gstatic.com/codesite/ph/11225697081361001927/js/dit_scripts.js"></script>
+
+
+
+  
+ 
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/11225697081361001927/js/ph_core.js"></script>
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/11225697081361001927/js/ph_dwiki.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
+

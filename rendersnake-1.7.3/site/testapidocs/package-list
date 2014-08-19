@@ -1,0 +1,5 @@
+org.rendersnake.ext.tidy
+org.rendersnake.generator
+org.rendersnake.test
+org.rendersnake.test.components
+org.rendersnake.test.debug

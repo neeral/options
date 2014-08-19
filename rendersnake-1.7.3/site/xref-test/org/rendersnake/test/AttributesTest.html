@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>AttributesTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../testapidocs/org/rendersnake/test/AttributesTest.html">View Javadoc</a></div><pre>
+
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> org.rendersnake.test;
+<a class="jxr_linenumber" name="2" href="#2">2</a>   
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="4" href="#4">4</a>   
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> junit.framework.Assert;
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> junit.framework.TestCase;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> org.rendersnake.HtmlAttributes;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> org.rendersnake.HtmlAttributesFactory;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../org/rendersnake/test/AttributesTest.html">AttributesTest</a> <strong class="jxr_keyword">extends</strong> TestCase {
+<a class="jxr_linenumber" name="12" href="#12">12</a>  
+<a class="jxr_linenumber" name="13" href="#13">13</a>      <strong class="jxr_keyword">private</strong> HtmlAttributes attrs;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  
+<a class="jxr_linenumber" name="15" href="#15">15</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUp() {
+<a class="jxr_linenumber" name="16" href="#16">16</a>          attrs = <strong class="jxr_keyword">new</strong> HtmlAttributes();
+<a class="jxr_linenumber" name="17" href="#17">17</a>      }
+<a class="jxr_linenumber" name="18" href="#18">18</a>  
+<a class="jxr_linenumber" name="19" href="#19">19</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testEntities() {
+<a class="jxr_linenumber" name="20" href="#20">20</a>          HtmlAttributes a = <strong class="jxr_keyword">new</strong> HtmlAttributes();
+<a class="jxr_linenumber" name="21" href="#21">21</a>          a.value(<span class="jxr_string">"\&quot;'&lt;&gt;&amp;"</span>);
+<a class="jxr_linenumber" name="22" href="#22">22</a>          Assert.assertEquals(<span class="jxr_string">" value=\&quot;&amp;quot;&amp;#39;&amp;lt;&amp;gt;&amp;amp;\&quot;"</span>, a.toHtml());
+<a class="jxr_linenumber" name="23" href="#23">23</a>      }
+<a class="jxr_linenumber" name="24" href="#24">24</a>      
+<a class="jxr_linenumber" name="25" href="#25">25</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testConstructor() {
+<a class="jxr_linenumber" name="26" href="#26">26</a>          HtmlAttributes one = <strong class="jxr_keyword">new</strong> HtmlAttributes();
+<a class="jxr_linenumber" name="27" href="#27">27</a>          one.id(<span class="jxr_string">"id"</span>);
+<a class="jxr_linenumber" name="28" href="#28">28</a>          HtmlAttributes withClass = <strong class="jxr_keyword">new</strong> HtmlAttributes(one);
+<a class="jxr_linenumber" name="29" href="#29">29</a>          withClass.<strong class="jxr_keyword">class</strong>_(<span class="jxr_string">"class"</span>);
+<a class="jxr_linenumber" name="30" href="#30">30</a>          Assert.assertEquals(<span class="jxr_string">" id=\&quot;id\&quot;"</span>, one.toHtml());
+<a class="jxr_linenumber" name="31" href="#31">31</a>          Assert.assertEquals(<span class="jxr_string">" id=\&quot;id\&quot; class=\&quot;class\&quot;"</span>, withClass.toHtml());
+<a class="jxr_linenumber" name="32" href="#32">32</a>      }
+<a class="jxr_linenumber" name="33" href="#33">33</a>      
+<a class="jxr_linenumber" name="34" href="#34">34</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testtestdata() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="35" href="#35">35</a>          attrs.dataTest(<span class="jxr_string">"yes"</span>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>          Assert.assertEquals(<span class="jxr_string">" data-test=\&quot;yes\&quot;"</span>, attrs.toHtml());
+<a class="jxr_linenumber" name="37" href="#37">37</a>      }
+<a class="jxr_linenumber" name="38" href="#38">38</a>      
+<a class="jxr_linenumber" name="39" href="#39">39</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testtestdata_skip() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="40" href="#40">40</a>          HtmlAttributes.RENDER_DATA_TEST_ATTRIBUTE = false;
+<a class="jxr_linenumber" name="41" href="#41">41</a>          <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="42" href="#42">42</a>              attrs.dataTest(<span class="jxr_string">"yes"</span>);        
+<a class="jxr_linenumber" name="43" href="#43">43</a>              Assert.assertEquals(<span class="jxr_string">""</span>, attrs.toHtml());
+<a class="jxr_linenumber" name="44" href="#44">44</a>          } <strong class="jxr_keyword">finally</strong> { HtmlAttributes.RENDER_DATA_TEST_ATTRIBUTE = !false; }        
+<a class="jxr_linenumber" name="45" href="#45">45</a>      }    
+<a class="jxr_linenumber" name="46" href="#46">46</a>      
+<a class="jxr_linenumber" name="47" href="#47">47</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testCanBeOnlyOne() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="48" href="#48">48</a>          attrs.id(<span class="jxr_string">"id1"</span>);
+<a class="jxr_linenumber" name="49" href="#49">49</a>          HtmlAttributes other = <strong class="jxr_keyword">new</strong> HtmlAttributes();
+<a class="jxr_linenumber" name="50" href="#50">50</a>          other.id(<span class="jxr_string">"id2"</span>);
+<a class="jxr_linenumber" name="51" href="#51">51</a>          System.out.println(attrs);
+<a class="jxr_linenumber" name="52" href="#52">52</a>          System.out.println(other);
+<a class="jxr_linenumber" name="53" href="#53">53</a>      }
+<a class="jxr_linenumber" name="54" href="#54">54</a>      
+<a class="jxr_linenumber" name="55" href="#55">55</a>      
+<a class="jxr_linenumber" name="56" href="#56">56</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testEmpty() {
+<a class="jxr_linenumber" name="57" href="#57">57</a>          assertEquals(<span class="jxr_string">""</span>, attrs.toHtml());
+<a class="jxr_linenumber" name="58" href="#58">58</a>      }
+<a class="jxr_linenumber" name="59" href="#59">59</a>  
+<a class="jxr_linenumber" name="60" href="#60">60</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testCreateOne() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="61" href="#61">61</a>          assertEquals(<span class="jxr_string">" one=\&quot;een\&quot;"</span>, <strong class="jxr_keyword">new</strong> HtmlAttributes(<span class="jxr_string">"one"</span>, <span class="jxr_string">"een"</span>).toHtml());
+<a class="jxr_linenumber" name="62" href="#62">62</a>      }
+<a class="jxr_linenumber" name="63" href="#63">63</a>  
+<a class="jxr_linenumber" name="64" href="#64">64</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAddNull() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="65" href="#65">65</a>          assertEquals(<span class="jxr_string">""</span>, attrs.add(<span class="jxr_string">"null"</span>, (String)<strong class="jxr_keyword">null</strong>).toHtml());
+<a class="jxr_linenumber" name="66" href="#66">66</a>      }
+<a class="jxr_linenumber" name="67" href="#67">67</a>  
+<a class="jxr_linenumber" name="68" href="#68">68</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAddNullKey() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="69" href="#69">69</a>          <strong class="jxr_keyword">try</strong> { attrs.add(<strong class="jxr_keyword">null</strong>, <span class="jxr_string">"null"</span>).toHtml(); fail(<span class="jxr_string">"should throw up"</span>); } <strong class="jxr_keyword">catch</strong> (NullPointerException nup) {}
+<a class="jxr_linenumber" name="70" href="#70">70</a>      }
+<a class="jxr_linenumber" name="71" href="#71">71</a>  
+<a class="jxr_linenumber" name="72" href="#72">72</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAddOne() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="73" href="#73">73</a>          assertEquals(<span class="jxr_string">" one=\&quot;one\&quot;"</span>, attrs.add(<span class="jxr_string">"one"</span>, <span class="jxr_string">"one"</span>).toHtml());
+<a class="jxr_linenumber" name="74" href="#74">74</a>      }
+<a class="jxr_linenumber" name="75" href="#75">75</a>  
+<a class="jxr_linenumber" name="76" href="#76">76</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAddNullEscape() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="77" href="#77">77</a>          assertEquals(<span class="jxr_string">""</span>, attrs.add(<span class="jxr_string">"null"</span>, <strong class="jxr_keyword">null</strong>, <strong class="jxr_keyword">true</strong>).toHtml());
+<a class="jxr_linenumber" name="78" href="#78">78</a>      }
+<a class="jxr_linenumber" name="79" href="#79">79</a>  
+<a class="jxr_linenumber" name="80" href="#80">80</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAddNullNoEscape() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="81" href="#81">81</a>          assertEquals(<span class="jxr_string">""</span>, attrs.add(<span class="jxr_string">"null"</span>, <strong class="jxr_keyword">null</strong>, false).toHtml());
+<a class="jxr_linenumber" name="82" href="#82">82</a>      }
+<a class="jxr_linenumber" name="83" href="#83">83</a>  
+<a class="jxr_linenumber" name="84" href="#84">84</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testToString() {
+<a class="jxr_linenumber" name="85" href="#85">85</a>          assertNotNull(attrs.toString());
+<a class="jxr_linenumber" name="86" href="#86">86</a>      }    
+<a class="jxr_linenumber" name="87" href="#87">87</a>      
+<a class="jxr_linenumber" name="88" href="#88">88</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testXmlLang() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="89" href="#89">89</a>          assertNotNull(<span class="jxr_string">" xml:lang=\&quot;lang\&quot;"</span>,attrs.xml_lang(<span class="jxr_string">"lang"</span>).toHtml());
+<a class="jxr_linenumber" name="90" href="#90">90</a>      }
+<a class="jxr_linenumber" name="91" href="#91">91</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> test_data_extension() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="92" href="#92">92</a>          assertEquals(<span class="jxr_string">" data-extension=\&quot;value\&quot;"</span>, HtmlAttributesFactory.data(<span class="jxr_string">"extension"</span>,<span class="jxr_string">"value"</span>).toHtml());
+<a class="jxr_linenumber" name="93" href="#93">93</a>      }       
+<a class="jxr_linenumber" name="94" href="#94">94</a>  }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+

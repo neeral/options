@@ -1,0 +1,10 @@
+This creates reports on your options positions.
+
+To use:
+1. Create a CSV file listing all the options trades you have done. It must match the format/structure of test1.csv.
+	If you are using Google Drive, open the Spreadsheet.
+	a. Click on File > Download as CSV (Comma-separated variable).
+2. Put CSV file in this folder. I.e. the same folder as options-report.jar
+3. Double-click on "run-report.sh" or "run-report.bat". This will open a command/terminal window.
+4. Enter command "options-report.jar <name or CSV file>"
+5. This will create a folder named output inside which all the generated reports are placed.

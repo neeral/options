@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+<duplication lines="18" tokens="101">
+<file line="53" path="/Users/emicklei/Projects/rendersnake/rendersnake/src/main/java/org/rendersnake/ext/servlet/RequestHeadersMap.java"/>
+<file line="58" path="/Users/emicklei/Projects/rendersnake/rendersnake/src/main/java/org/rendersnake/ext/servlet/RequestParametersMap.java"/>
+<codefragment>
+<![CDATA[
+    }
+
+    public ContextMap withObject(String key, Object value) {
+        throw new UnsupportedOperationException("map is read-only");
+    }
+
+    public String getString(String key, String... optional) {
+        String s = request.getParameter(key);
+        return s == null ? ((optional == null || optional.length == 0) ? null : optional[0]) : s;
+    }
+
+    public ContextMap withString(String key, String value) {
+        throw new UnsupportedOperationException("map is read-only");
+    }
+
+    public Object clear(String key) {
+        throw new UnsupportedOperationException("map is read-only");
+    }
+]]>
+</codefragment>
+</duplication>
+</pmd-cpd>
