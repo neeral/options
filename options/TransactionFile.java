@@ -27,6 +27,8 @@ class TransactionFile {
 					firstLine = false;
 					continue;
 				}
+
+                if (line.isEmpty()) continue;
 				
 				String[] cols = line.trim().split(",");
 				
@@ -44,7 +46,8 @@ class TransactionFile {
 						cols[5],
 						Integer.valueOf(cols[6]),
 						cols[7],
-						Double.valueOf(cols[8]));
+						Double.valueOf(cols[8]),
+                        line);
 				transactions.add(opt);
 			}
 			

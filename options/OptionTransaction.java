@@ -7,11 +7,23 @@ import java.util.Date;
 public class OptionTransaction implements Comparable<OptionTransaction> {
 	
 	private static final SimpleDateFormat TRADE_DATE_FORMAT = new SimpleDateFormat("dd/MM/yy");
+	private static final SimpleDateFormat TRADE_DATE_FORMAT_2 = new SimpleDateFormat("dd-MMM-yy");
 	private static final SimpleDateFormat EXPIRY_DATE_FORMAT = new SimpleDateFormat("MMM-yy");
 
 	OptionTransaction(String trade_date, String ticker, String expiry, int strike, String buy_sell, String call_put, int no_of_lots,
-			String account, double premium) throws ParseException {
-		this.trade_date = TRADE_DATE_FORMAT.parse(trade_date);
+			String account, double premium, String raw) throws ParseException {
+
+        try {
+		    this.trade_date = TRADE_DATE_FORMAT.parse(trade_date);
+        } catch (ParseException pe) {
+            try {
+                this.trade_date = TRADE_DATE_FORMAT_2.parse(trade_date);
+            } catch (ParseException pe2) {
+                System.err.println("The trade date must be in the format dd/MM/yy or dd-MMM-yy. However we have an " + pe2.getMessage() + ". This error is caused by the line: " + raw);
+                throw pe2;
+            }
+        }
+
 		this.ticker = ticker;
 		this.expiry =  EXPIRY_DATE_FORMAT.parse(expiry);
 		this.strike = strike;
@@ -35,7 +47,7 @@ public class OptionTransaction implements Comparable<OptionTransaction> {
 
 	enum Buy_Sell { BUY, SELL };
 	enum OptionType { CALL, PUT };
-	
+
 	String quantity() {
 		StringBuffer sb = new StringBuffer();
 		if (Buy_Sell.BUY.equals(buy_sell))
