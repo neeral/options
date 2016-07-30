@@ -6,5 +6,7 @@ To use:
 	a. Click on File > Download as CSV (Comma-separated variable).
 2. Put CSV file in this folder. I.e. the same folder as options-report.jar
 3. Double-click on "run-report.sh" or "run-report.bat". This will open a command/terminal window.
-4. Enter command "options-report.jar <name or CSV file>"
+	b. If using Ubuntu, a dialogue box may appear asking "Do you wan to run run-report.sh, or display its contents?". Click on 'Run'.
+4. Enter command "options-report.jar <name or CSV file>" (Windows)
+	b. If you are using Ubuntu, type "./options-report.jar <name>"
 5. This will create a folder named output inside which all the generated reports are placed.
